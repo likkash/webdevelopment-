@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop</title>
+    <script src="workshopvalidate1.js"></script>
+    <style>
+        span{
+            color: red;
+        }
+        </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #e6f7ff;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand col-md-5" href="#">
+                <img src="college.png" alt="Your Logo"  class="img-fluid">
+            </a>
+            <div class="col-md-4 text-center col-lg-4">
+                <span class="text-success font-weight-bold  responsive-font fs-4  " style="font-weight: 1rem;">Name :Likkash R</span>
+            </div>
+            <div class="col-md-2 text-center">
+                <span class="text-success font-weight-bold fs-4">ID: 6064</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>  
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class=" btn btn-outline-danger border-danger" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container">
+        <div class="row align-items-center" style="min-height: 100vh;">
+            <div class="col-lg-3 col-md-4 col-12">
+            </div>
+            <div class="col-lg-6 col-md-8 col-12 mt-3 mt-md-0">
+                <div class="p-3 shadow-lg rounded-4 bg-light">
+                    <form name="signup" onsubmit="return authenticate()">
+                        <div class="mb-3 text-center" style="color: #8B4513;"> <!-- Brown color -->
+                            <h5 style="display: inline;">STUDENT FIELD WORK AND INTERNSHIP workshop</h5>
+                        </div>
+                        <div>
+                            <label>Name of the Faculty<span id="errfacname"></span></label>
+                            <input type="text" name="facname" placeholder="enter your name"  class="form-control" />
+                        </div>
+                        <div>
+                            <label>Designation<span id="errdesign"></span></label>
+                            <select class="form-select" name="design">
+                                <option></option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option> 
+                                <option value="employee">Employee</option>                              
+                            </select>
+                        </div>
+                        <div>
+                       
+                            <label for="Nature">Nature of the program<span id="errnature"></span></label>
+                            <select class="form-select" name="nature">
+                                <option></option>
+                                <option value="workshop">Workshop</option>
+                                <option value="Seminar">Seminar</option> 
+                                <option value="fdp">FDP</option>
+                                <option value="sop">SDP</option>
+                                <option value="sttp">STTP</option>
+                                <option value="Webinar">Webinar</option>
+                              </select>
+                        </div>
+                        <label for=""></label>
+                        <div>
+                            <label>Title of the program<span id="errtitle"></span></label>
+                            <input type="text" name="title"  class="form-control" />
+                        </div>
+                        <div>
+                            <label>Duration From<span id="errduafrom"></span></label>
+                            <input type="date" name="duafrom"  class="form-control"/>
+                        </div>
+                        <div>
+                            <label>Duration To<span id="errduato"></span></label>
+                            <input type="date" name="duato"  class="form-control" />
+                        </div>
+                      
+                        <div>
+                            <label>Participation<span id="errpartic"></span></label>
+                            <select class="form-select" name="partic">
+                                <option></option>
+                                <option value="Internal">Internal</option>
+                                <option value="External">External</option> 
+                              </select>
+                        </div>
+                        <div>
+                            <label>Location of the organization<span id="errlocation"></span></label>
+                            <input type="text" name="location"  class="form-control" />
+                        </div>
+                        <div>
+                            <label>Amount provided by the HEI<span id="erramount"></span></label>
+                            <input type="text" name="amount"  class="form-control" />
+                        </div>
+                        <div>
+                            <label>Certificate PDF<span id="errcertificate"></span></label> <br>
+                            <input type="file" name="certificate"/>
+                        </div>
+    
+                        <div class="m-5 row justify-content-around">
+                            <input class="col-5 btn btn-primary" type="submit" value="Submit" />
+                            <input class="col-5 btn btn-danger" type="reset" value="Clear" />
+                        </div>
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
